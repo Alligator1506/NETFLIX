@@ -200,7 +200,7 @@ fun Profile(
                 navigator.navigate(WatchListDestination)
             }
         ) {
-            Text(text = "Danh sách cuả tôi")
+            Text(text = "Danh sách của tôi")
         }
 
         Column(
