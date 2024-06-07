@@ -14,35 +14,35 @@ interface ApiService {
     suspend fun getTrendingMovies(
         @Query("page") page: Int = 0,
         @Query("api_key") apiKey: String = BuildConfig.NEATFLIX_API_KEY,
-        @Query("language") language: String = "en"
+        @Query("language") language: String = "vi"
     ): FilmResponse
 
     @GET("movie/popular")
     suspend fun getPopularMovies(
         @Query("page") page: Int = 0,
         @Query("api_key") apiKey: String = BuildConfig.NEATFLIX_API_KEY,
-        @Query("language") language: String = "en"
+        @Query("language") language: String = "vi"
     ): FilmResponse
 
     @GET("movie/top_rated")
     suspend fun getTopRatedMovies(
         @Query("page") page: Int = 0,
         @Query("api_key") apiKey: String = BuildConfig.NEATFLIX_API_KEY,
-        @Query("language") language: String = "en"
+        @Query("language") language: String = "vi"
     ): FilmResponse
 
     @GET("movie/now_playing")
     suspend fun getNowPlayingMovies(
         @Query("page") page: Int = 0,
         @Query("api_key") apiKey: String = BuildConfig.NEATFLIX_API_KEY,
-        @Query("language") language: String = "en"
+        @Query("language") language: String = "vi"
     ): FilmResponse
 
     @GET("movie/upcoming")
     suspend fun getUpcomingMovies(
         @Query("page") page: Int = 0,
         @Query("api_key") apiKey: String = BuildConfig.NEATFLIX_API_KEY,
-        @Query("language") language: String = "en"
+        @Query("language") language: String = "vi"
     ): FilmResponse
 
     @GET("movie/{movie_id}/recommendations")
@@ -50,7 +50,7 @@ interface ApiService {
         @Path("movie_id") movieId: Int,
         @Query("page") page: Int = 0,
         @Query("api_key") apiKey: String = BuildConfig.NEATFLIX_API_KEY,
-        @Query("language") language: String = "en"
+        @Query("language") language: String = "vi"
     ): FilmResponse
 
     @GET("movie/{movie_id}/similar")
@@ -58,7 +58,7 @@ interface ApiService {
         @Path("movie_id") filmId: Int,
         @Query("page") page: Int = 0,
         @Query("api_key") apiKey: String = BuildConfig.NEATFLIX_API_KEY,
-        @Query("language") language: String = "en"
+        @Query("language") language: String = "vi"
     ): FilmResponse
 
     @GET("discover/movie?")
@@ -67,7 +67,7 @@ interface ApiService {
         @Query("primary_release_date.gte") gteReleaseDate: String = "1940-01-01",
         @Query("primary_release_date.lte") lteReleaseDate: String = "1981-01-01",
         @Query("api_key") apiKey: String = BuildConfig.NEATFLIX_API_KEY,
-        @Query("language") language: String = "en",
+        @Query("language") language: String = "vi",
         @Query("sort_by") sortBy: String = "vote_count.desc"
     ): FilmResponse
 
@@ -80,7 +80,7 @@ interface ApiService {
     @GET("genre/movie/list")
     suspend fun getMovieGenres(
         @Query("api_key") apiKey: String = BuildConfig.NEATFLIX_API_KEY,
-        @Query("language") language: String = "en"
+        @Query("language") language: String = "vi"
     ): GenreResponse
 
     @GET("search/multi")
@@ -89,7 +89,7 @@ interface ApiService {
         @Query("page") page: Int = 0,
         @Query("include_adult") includeAdult: Boolean = true,
         @Query("api_key") apiKey: String = BuildConfig.NEATFLIX_API_KEY,
-        @Query("language") language: String = "en"
+        @Query("language") language: String = "vi"
     ): MultiSearchResponse
 
     /** **Tv Shows**
@@ -99,7 +99,7 @@ interface ApiService {
     @GET("genre/tv/list")
     suspend fun getTvShowGenres(
         @Query("api_key") apiKey: String = BuildConfig.NEATFLIX_API_KEY,
-        @Query("language") language: String = "en-US"
+        @Query("language") language: String = "vi"
     ): GenreResponse
 
     @GET("tv/{tv_id}/credits")
@@ -113,21 +113,21 @@ interface ApiService {
         @Path("tv_id") filmId: Int,
         @Query("page") page: Int = 0,
         @Query("api_key") apiKey: String = BuildConfig.NEATFLIX_API_KEY,
-        @Query("language") language: String = "en-US"
+        @Query("language") language: String = "vi"
     ): FilmResponse
 
     @GET("trending/tv/day")
     suspend fun getTrendingTvSeries(
         @Query("page") page: Int = 0,
         @Query("api_key") apiKey: String = BuildConfig.NEATFLIX_API_KEY,
-        @Query("language") language: String = "en-US"
+        @Query("language") language: String = "vi"
     ): FilmResponse
 
     @GET("tv/popular")
     suspend fun getPopularTvShows(
         @Query("page") page: Int = 0,
         @Query("api_key") apiKey: String = BuildConfig.NEATFLIX_API_KEY,
-        @Query("language") language: String = "en-US"
+        @Query("language") language: String = "vi"
     ): FilmResponse
 
 
@@ -135,14 +135,14 @@ interface ApiService {
     suspend fun getTopRatedTvShows(
         @Query("page") page: Int = 0,
         @Query("api_key") apiKey: String = BuildConfig.NEATFLIX_API_KEY,
-        @Query("language") language: String = "en-US"
+        @Query("language") language: String = "vi"
     ): FilmResponse
 
     @GET("tv/on_the_air")
     suspend fun getOnTheAirTvShows(
         @Query("page") page: Int = 0,
         @Query("api_key") apiKey: String = BuildConfig.NEATFLIX_API_KEY,
-        @Query("language") language: String = "en-US"
+        @Query("language") language: String = "vi"
     ): FilmResponse
 
     @GET("tv/{tv_id}/recommendations")
@@ -150,7 +150,7 @@ interface ApiService {
         @Path("tv_id") filmId: Int,
         @Query("page") page: Int = 0,
         @Query("api_key") apiKey: String = BuildConfig.NEATFLIX_API_KEY,
-        @Query("language") language: String = "en-US"
+        @Query("language") language: String = "vi"
     ): FilmResponse
 
     @GET("discover/tv?")
@@ -159,7 +159,7 @@ interface ApiService {
         @Query("first_air_date.gte") gteFirstAirDate: String = "1940-01-01",
         @Query("first_air_date.lte") lteFirstAirDate: String = "1981-01-01",
         @Query("api_key") apiKey: String = BuildConfig.NEATFLIX_API_KEY,
-        @Query("language") language: String = "en-US",
+        @Query("language") language: String = "vi",
         @Query("sort_by") sortBy: String = "vote_count.desc"
     ): FilmResponse
 
@@ -170,7 +170,7 @@ interface ApiService {
         @Path("film_path") filmPath: String,
         @Query("page") page: Int = 0,
         @Query("api_key") apiKey: String = BuildConfig.NEATFLIX_API_KEY,
-        @Query("language") language: String = "en-US"
+        @Query("language") language: String = "vi"
     ): ReviewsResponse
 
     /** Watch providers (US only)*/

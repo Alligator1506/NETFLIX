@@ -402,7 +402,7 @@ fun MovieDetails(
             item {
                 AnimatedVisibility(visible = (filmCastList.isNotEmpty())) {
                     Text(
-                        text = "Cast",
+                        text = "Diễn viên",
                         fontWeight = Bold,
                         fontSize = 18.sp,
                         color = AppOnPrimaryColor,
@@ -420,7 +420,7 @@ fun MovieDetails(
             item {
                 if (similarFilms.itemCount != 0) {
                     Text(
-                        text = "Similar",
+                        text = "Cùng thể loại",
                         fontWeight = Bold,
                         fontSize = 18.sp,
                         color = AppOnPrimaryColor,

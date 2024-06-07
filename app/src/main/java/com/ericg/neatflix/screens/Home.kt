@@ -272,7 +272,6 @@ fun NestedScroll(
         }
         item {
             ScrollableMovieItems(
-                landscape = true,
                 navigator = navigator,
                 pagingItems = trendingFilms,
                 selectedFilmType = selectedFilmType,
